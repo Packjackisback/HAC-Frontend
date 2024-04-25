@@ -8,7 +8,7 @@ loginForm.addEventListener('submit', async (event) => {
   const password = document.getElementById('password').value;
 
   try {
-    const response = await fetch(`https://homeaccess.katyisd.org/HomeAccess/Content/Student/Assignments.aspx?user=${username}&pass=${password}`);
+    const response = await fetch(`https://cors-anywhere.herokuapp.com/https://homeaccess.katyisd.org/HomeAccess/Content/Student/Assignments.aspx?user=${username}&pass=${password}`);
     const html = await response.text();
 
     const parser = new DOMParser();
